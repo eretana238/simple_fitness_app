@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:simple_fitness_app/components/popular_sets_carousel.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -11,8 +12,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Color primaryColor = Color(0x58484599);
-  Color secondaryColor = Color.fromARGB(255, 85, 53, 145);
+  Color secondaryColor = Color(0xff8b82d0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,13 +23,13 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 25.0, vertical: 15.0),
+                    horizontal: 25.0, vertical: 5.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     FaIcon(
-                      FontAwesomeIcons.gripHorizontal,
-                      color: Color(0x58484599),
+                      FontAwesomeIcons.gripLines,
+                      color: secondaryColor,
                     ),
                     Container(
                       child: GestureDetector(
@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(30.0),
                           child: Image(
                             image: AssetImage('assets/images/me.jpg'),
-                            height: 45.0,
+                            height: 40.0,
                           ),
                         ),
                       ),
@@ -48,27 +48,30 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 25.0),
+              padding: EdgeInsets.only(left: 25.0, right: 120.0,top: 10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     'May 29, 2020',
                     style: TextStyle(
-                      color: primaryColor,
+                      color: secondaryColor,
+                      fontFamily: 'Lato',
                     ),
                   ),
                   Text(
                     'Have a nice day, Esteban!',
                     style: TextStyle(
-                      color: secondaryColor,
+                      color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 30.0,
+                      fontSize: 24.0,
+                      fontFamily: 'Lato',
                     ),
                   )
                 ],
               ),
             ),
+            PopularSetsCarousel(),
           ],
         ),
       ),

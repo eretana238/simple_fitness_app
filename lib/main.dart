@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Simple Fitness',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Color(0xff5f478c),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
