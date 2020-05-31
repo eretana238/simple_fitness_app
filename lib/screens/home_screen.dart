@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_fitness_app/components/popular_sets_carousel.dart';
+import 'package:simple_fitness_app/components/videos_carousel.dart';
+import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,6 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Color secondaryColor = Color(0xff9088b3);
+  String now = new DateFormat.yMMMMd('en_US').format(new DateTime.now());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'May 29, 2020',
+                    now,
                     style: TextStyle(
                       color: secondaryColor,
                       fontFamily: 'Lato',
@@ -73,6 +76,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             PopularSetsCarousel(),
+            VideosCarousel(),
           ],
         ),
       ),

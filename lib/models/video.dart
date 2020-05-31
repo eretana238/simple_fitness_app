@@ -1,14 +1,15 @@
 import 'package:flutter/cupertino.dart';
 
 class Video {
-  String image;
+  String imageUrl;
   String name;
+  int views;
 
-  Video({this.image, this.name});
+  Video({this.imageUrl, this.name, this.views});
 }
 
 List<Video> videos = [
-  Video(image: 'assets/images/yoga1.jpg', name: 'Yoga'),
-  Video(image: 'assets/images/cardio.jpg', name: 'Cardio'),
-  Video(image: 'assets/images/stretch.jpg', name: 'Stretch')
+  Video(imageUrl: 'assets/images/yoga1.jpg', name: 'Yoga', views: 102930),
+  Video(imageUrl: 'assets/images/cardio.jpg', name: 'Cardio', views: 89390),
+  Video(imageUrl: 'assets/images/biking.jpg', name: 'Biking', views: 55903),
 ];
