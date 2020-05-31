@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_fitness_app/screens/workout_screen.dart';
 import '../models/workout.dart';
+import '../components/workout_card.dart';
 
 class PopularSetsCarousel extends StatelessWidget {
   @override
@@ -8,7 +9,7 @@ class PopularSetsCarousel extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 40.0),
+          padding: EdgeInsets.fromLTRB(25.0, 40.0, 25.0, 10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -34,24 +35,20 @@ class PopularSetsCarousel extends StatelessWidget {
           ),
         ),
         Container(
-          height: 300.0,
+          height: 210.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: workouts.length,
             itemBuilder: (BuildContext build, int index) {
               Workout workout = workouts[index];
-              return Container(
-                width: 210.0,
-                margin: EdgeInsets.all(10.0),
-                child: Stack(
-                  children: <Widget>[
-                    Container(
-                      width: 190,
-                      height: 120,
-                      color: Colors.blue,
-                    ),
-                  ],
+              return GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => WorkoutScreen(workout: workout),
+                  ),
                 ),
+                child: WorkoutCard(workout),
               );
             },
           ),

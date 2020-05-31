@@ -1,6 +1,6 @@
 class Workout {
-  int time;
-  int amountOfWorkouts;
+  int time = 0;
+  int amountOfWorkouts = 0;
   String name;
   String imageUrl;
 

@@ -3,16 +3,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_fitness_app/components/popular_sets_carousel.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Color secondaryColor = Color(0xff8b82d0);
+  Color secondaryColor = Color(0xff9088b3);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     FaIcon(
                       FontAwesomeIcons.gripLines,
-                      color: secondaryColor,
+                      color: Theme.of(context).primaryColor,
                     ),
                     Container(
                       child: GestureDetector(
