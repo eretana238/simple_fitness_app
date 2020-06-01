@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:simple_fitness_app/models/workout.dart';
+import 'package:intl/intl.dart';
 
 class WorkoutScreen extends StatefulWidget {
   final Workout workout;
+  String now = new DateFormat.yMMMMd('en_US').format(new DateTime.now());
 
   WorkoutScreen({this.workout});
 
