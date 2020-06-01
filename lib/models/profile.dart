@@ -6,10 +6,10 @@ class Profile {
 
   Profile(this._name, this._image);
 
-  String getName() {
+  String get name {
     return this._name;
   }
-  AssetImage getImage() {
+  AssetImage get image {
     return this._image;
   }
 }

@@ -35,7 +35,21 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
                     ),
                   ],
                 ),
-              )
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Row(
+                  children: <Widget>[
+                    Text('Date1'),
+                    Text('Date2'),
+                    Text('Date3'),
+                    Text('CurrDate'),
+                    Text('Date5'),
+                    Text('Date6'),
+                    Text('Date7'),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
