@@ -26,8 +26,8 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     IconButton(
-                      icon: FaIcon(
-                        FontAwesomeIcons.gripLines,
+                      icon: Icon(
+                        Icons.apps,
                         color: Theme.of(context).primaryColor,
                       ),
                       onPressed: () {

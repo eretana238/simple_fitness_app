@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_fitness_app/components/date_card.dart';
 import 'package:simple_fitness_app/models/workout.dart';
 import 'package:intl/intl.dart';
 
@@ -42,13 +43,7 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
                 child: Row(
                   children: <Widget>[
-                    Text('Date1'),
-                    Text('Date2'),
-                    Text('Date3'),
-                    Text('CurrDate'),
-                    Text('Date5'),
-                    Text('Date6'),
-                    Text('Date7'),
+                    DateCard(),
                   ],
                 ),
               ),
